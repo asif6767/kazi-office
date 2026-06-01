@@ -1,0 +1,36 @@
+/* Add Review Form */
+.add-rev-wrap{max-width:780px;margin:0 auto}
+.add-rev-card{background:var(--wh);border-radius:var(--r4);padding:2.4rem;border:1px solid var(--bo);box-shadow:var(--sh2)}
+.add-rev-card h2{font-family:'Noto Serif Bengali',serif;font-size:var(--fs-h3);color:var(--gd);margin-bottom:.3rem}
+.add-rev-card .subtext{font-size:var(--fs-body);color:var(--ts);margin-bottom:1.55rem}
+
+/* Correct star picker — left to right, no reverse tricks */
+.feed-star-pick{display:flex;flex-direction:row;gap:.3rem;font-size:2rem;margin-top:.3rem}
+.feed-star-pick input{display:none}
+.feed-star-pick label{cursor:pointer;color:#ddd;transition:color .12s;line-height:1;user-select:none}
+/* JS handles coloring */
+
+.photo-up-lbl2{display:flex;align-items:center;gap:.65rem;cursor:pointer;background:var(--cd);border:2px dashed var(--bo);border-radius:var(--r1);padding:.75rem 1rem;font-size:var(--fs-body);color:var(--tm);transition:all var(--tr)}
+.photo-up-lbl2:hover{background:var(--gs);border-color:var(--gr)}
+.photo-up-lbl2 input{display:none}
+#feedPhotoPrev{display:none;max-height:160px;border-radius:var(--r1);margin-top:.55rem;border:1px solid var(--bo)}
+.rev-submit{width:100%;margin-top:1.45rem;background:linear-gradient(135deg,var(--gr),var(--gd));color:#fff;padding:.88rem;border:none;border-radius:var(--r2);font-family:'Hind Siliguri',sans-serif;font-size:var(--fs-body-lg);font-weight:700;cursor:pointer;box-shadow:0 5px 18px rgba(139,105,20,.28);transition:transform var(--tr),box-shadow var(--tr)}
+.rev-submit:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(139,105,20,.4)}
+
+/* Gallery */
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1.05rem}
+.photo-tile{border-radius:var(--r2);overflow:hidden;aspect-ratio:1;position:relative;cursor:pointer;border:2px solid var(--bol);transition:transform var(--tr),box-shadow var(--tr)}
+.photo-tile:hover{transform:scale(1.03);box-shadow:var(--sh2)}
+.photo-tile img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-tile-ph{width:100%;height:100%;background:linear-gradient(160deg,var(--gp),var(--cde));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;color:var(--gd);font-size:.79rem;text-align:center;padding:.9rem}
+.tile-ov{position:absolute;inset:0;background:rgba(44,26,0,.54);display:flex;align-items:center;justify-content:center;color:#fff;font-size:var(--fs-h3);opacity:0;transition:opacity var(--tr)}
+.photo-tile:hover .tile-ov{opacity:1}
+
+/* Reviews wall */
+.rev-filter-row{display:flex;gap:.55rem;flex-wrap:wrap;align-items:center;margin-bottom:1.8rem}
+.rfbtn{padding:.38rem .95rem;border-radius:50px;border:1.5px solid var(--bo);background:var(--wh);color:var(--tm);font-family:'Hind Siliguri',sans-serif;font-size:var(--fs-sm);font-weight:600;cursor:pointer;transition:all var(--tr)}
+.rfbtn.active,.rfbtn:hover{background:var(--gr);color:#fff;border-color:var(--gr)}
+.kazi-sel{padding:.4rem .95rem;border-radius:var(--r1);border:1.5px solid var(--bo);background:var(--wh);color:var(--td);font-family:'Hind Siliguri',sans-serif;font-size:var(--fs-sm);outline:none;cursor:pointer}
+.rev-wall{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.35rem}
+.no-rev{text-align:center;padding:3rem;color:var(--ts);grid-column:1/-1;background:var(--wh);border-radius:var(--r2);border:1px dashed var(--bo)}
+.rev-card-kazi-tag{display:inline-block;font-size:var(--fs-xs);font-weight:700;color:var(--gr);background:rgba(201,151,10,.08);border:1px solid var(--bo);border-radius:50px;padding:.16rem .62rem;margin-bottom:.55rem}

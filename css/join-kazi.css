@@ -1,0 +1,74 @@
+.join-layout{display:grid;grid-template-columns:1fr 300px;gap:2.4rem;max-width:1060px;margin:0 auto}
+.join-form-card{background:var(--wh);border-radius:var(--r4);border:1px solid var(--bo);box-shadow:var(--sh2);overflow:hidden}
+.jfh{background:linear-gradient(135deg,var(--gr),var(--gd));padding:1.9rem 2.3rem}
+.jfh h2{font-family:'Noto Serif Bengali',serif;font-size:1.55rem;font-weight:900;color:#fff;margin-bottom:.3rem}
+.jfh p{font-size:var(--fs-body);color:rgba(255,255,255,.78)}
+.jfb{padding:2.3rem}
+.fsec-title{font-family:'Noto Serif Bengali',serif;font-size:var(--fs-h4);font-weight:700;color:var(--gd);margin:1.75rem 0 .95rem;padding-bottom:.42rem;border-bottom:2px solid var(--gp);display:flex;align-items:center;gap:.55rem}
+.fsec-title:first-child{margin-top:0}
+.photo-up-lbl{display:flex;align-items:center;gap:.65rem;cursor:pointer;background:var(--cd);border:2px dashed var(--bo);border-radius:var(--r2);padding:1.2rem 1.4rem;font-size:var(--fs-body);color:var(--tm);transition:all var(--tr)}
+.photo-up-lbl:hover{background:var(--gs);border-color:var(--gr)}
+.photo-up-lbl input{display:none}
+.photo-up-lbl .pu-icon{font-size:1.5rem}
+.photo-up-lbl .pu-text span{font-weight:600;color:var(--gd);display:block}
+.photo-up-lbl .pu-text small{font-size:var(--fs-xs);color:var(--ts)}
+#jPhotoPrev{display:none;width:110px;height:138px;object-fit:cover;border-radius:var(--r2);margin-top:.65rem;border:2px solid var(--gp)}
+.chk-list{display:flex;flex-direction:column;gap:.58rem;margin-top:.3rem}
+.chk-item{display:flex;align-items:flex-start;gap:.75rem;font-size:var(--fs-body);color:var(--tm);padding:.5rem .8rem;background:var(--cd);border-radius:var(--r1);cursor:pointer}
+.chk-item input[type="checkbox"]{width:16px;height:16px;accent-color:var(--gr);flex-shrink:0;margin-top:.2rem;cursor:pointer}
+.join-submit{width:100%;margin-top:2rem;background:linear-gradient(135deg,var(--gr),var(--gd));color:#fff;padding:1rem;border:none;border-radius:var(--r2);font-family:'Hind Siliguri',sans-serif;font-size:var(--fs-h4);font-weight:700;cursor:pointer;box-shadow:0 5px 18px rgba(139,105,20,.3);transition:transform var(--tr),box-shadow var(--tr)}
+.join-submit:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(139,105,20,.42)}
+
+.aside-card{background:linear-gradient(160deg,var(--gp),var(--cde));border-radius:var(--r4);padding:1.9rem;border:1px solid var(--bo);margin-bottom:1.3rem}
+.aside-card h3{font-family:'Noto Serif Bengali',serif;font-size:var(--fs-h4);font-weight:900;color:var(--gd);margin-bottom:1.1rem}
+.aside-item{display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 0;border-bottom:1px solid rgba(201,151,10,.12)}
+.aside-item:last-child{border-bottom:none}
+.aside-ic{font-size:var(--fs-h3);flex-shrink:0;margin-top:.05rem}
+.aside-item h4{font-size:var(--fs-body);font-weight:700;color:var(--gd);margin-bottom:.18rem}
+.aside-item p{font-size:var(--fs-sm);color:var(--tm);line-height:var(--lh-snug)}
+.steps-card{background:var(--wh);border-radius:var(--r3);border:1px solid var(--bol);box-shadow:var(--sh1);padding:1.45rem}
+.steps-card h4{font-family:'Noto Serif Bengali',serif;font-size:var(--fs-body-lg);font-weight:700;color:var(--gd);margin-bottom:1rem}
+.step-row{display:flex;gap:.75rem;align-items:center;font-size:var(--fs-sm);color:var(--tm);margin-bottom:.7rem}
+.step-row:last-child{margin-bottom:0}
+.step-num-sm{width:24px;height:24px;border-radius:50%;background:var(--gr);color:#fff;display:flex;align-items:center;justify-content:center;font-size:var(--fs-xs);font-weight:700;flex-shrink:0}
+
+@media(max-width:860px){.join-layout{grid-template-columns:1fr}}
+
+/* ── CV UPLOAD (Upgrade 4) ── */
+.cv-up-lbl { margin-bottom: .75rem; }
+.cv-preview {
+  background: var(--gs);
+  border: 1.5px solid var(--gp);
+  border-radius: var(--r2);
+  padding: .75rem 1rem;
+  margin-bottom: .6rem;
+}
+.cv-preview-inner {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+}
+.cv-prev-ic { font-size: 1.8rem; flex-shrink: 0; }
+.cv-prev-info { flex: 1; min-width: 0; }
+.cv-prev-name {
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--gd);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cv-prev-size { font-size: .75rem; color: var(--ts); margin-top: .12rem; }
+.cv-remove-btn {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--bol);
+  background: var(--wh);
+  cursor: pointer;
+  font-size: .85rem;
+  color: var(--ts);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--tr), color var(--tr);
+}
+.cv-remove-btn:hover { background: #fee; color: #c00; }

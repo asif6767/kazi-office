@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>আমাদের কাজীরা — ইউনুস কাজী অফিস</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/kazis.css">
+<link rel="stylesheet" href="css/kazi-ui-fixes.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-brand"><div class="brand-dot"></div>ইউনুস কাজী অফিস</a>
+  <ul class="nav-links">
+    <li><a href="index.html#nikah">নিকাহ সেবা</a></li>
+    <li><a href="kazis.html" class="active">আমাদের কাজীরা</a></li>
+    <li><a href="feedback.html">ফিডব্যাক</a></li>
+    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+    <li><a href="index.html#contact">যোগাযোগ</a></li>
+    <li><a href="index.html#booking" class="nav-book">বুকিং করুন</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" onclick="closeMobileNav()">হোম</a>
+  <a href="index.html#nikah" onclick="closeMobileNav()">নিকাহ সেবা</a>
+  <a href="feedback.html" onclick="closeMobileNav()">ফিডব্যাক</a>
+  <a href="about.html" onclick="closeMobileNav()">আমাদের সম্পর্কে</a>
+  <a href="join-kazi.html" onclick="closeMobileNav()" style="color:var(--gm);font-weight:600">✦ কাজী হিসেবে যোগ দিন</a>
+  <a href="index.html#booking" onclick="closeMobileNav()" style="color:var(--gd);font-weight:700">→ বুকিং করুন</a>
+</nav>
+
+<div class="page-hero"><div class="geo-pattern"></div>
+  <div class="breadcrumb"><a href="index.html">হোম</a><span class="sep">›</span><span>আমাদের কাজীরা</span></div>
+  <h1>আমাদের কাজীরা</h1>
+  <p>অভিজ্ঞ, সরকার-নিবন্ধিত ও বিশ্বস্ত কাজীদের দল — আপনার বিশেষ মুহূর্তটি সুন্দর করতে সদা প্রস্তুত।</p>
+  <div style="display:flex;gap:.7rem;justify-content:center;margin-top:1.6rem;flex-wrap:wrap">
+    <div style="background:rgba(232,197,71,.12);border:1px solid rgba(232,197,71,.22);border-radius:50px;padding:.3rem 1rem;font-size:.78rem;color:rgba(255,255,255,.8);font-weight:600">✦ ৪ জন বিশেষজ্ঞ কাজী</div>
+    <div style="background:rgba(232,197,71,.12);border:1px solid rgba(232,197,71,.22);border-radius:50px;padding:.3rem 1rem;font-size:.78rem;color:rgba(255,255,255,.8);font-weight:600">✦ ৮,৯২০+ সফল নিকাহ</div>
+    <div style="background:rgba(232,197,71,.12);border:1px solid rgba(232,197,71,.22);border-radius:50px;padding:.3rem 1rem;font-size:.78rem;color:rgba(255,255,255,.8);font-weight:600">✦ সরকার নিবন্ধিত</div>
+  </div>
+</div>
+
+<!-- CHIEF KAZI -->
+<section style="background:linear-gradient(135deg,#FDF8EE,#F5EDD8);padding:68px 5%">
+  <div class="sec-hdr center"><div class="tag">প্রধান কাজী</div><h2 class="sec-title">অফিস প্রধান</h2></div>
+  <div class="chief-wrap"><div class="chief-card reveal" id="chiefCard"></div></div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="sec-hdr center">
+    <div class="tag">আমাদের দল</div>
+    <h2 class="sec-title">সকল কাজী</h2>
+    <p class="sec-desc" style="margin:0 auto">পছন্দের কাজী বেছে নিন — রেটিং, অভিজ্ঞতা ও সময়সূচি দেখে সরাসরি বুকিং দিন।</p>
+  </div>
+  <div class="team-grid" id="teamGrid"></div>
+</section>
+
+<!-- JOIN CTA (at end of employee list) -->
+<div class="join-cta">
+  <div class="tag" style="background:rgba(255,255,255,.1);color:var(--gl);border-color:rgba(232,197,71,.2)">আমাদের দলে যোগ দিন</div>
+  <h2>কাজী হিসেবে আমাদের দলে যোগ দিন</h2>
+  <p>আপনি যদি সরকার-নিবন্ধিত কাজী হন এবং আমাদের সাথে কাজ করতে চান, তাহলে আপনার CV জমা দিন। আমরা পর্যালোচনা করে আপনার ইমেইলে জানাব।</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+    <a href="join-kazi.html" class="btn btn-inv btn-lg">📋 কাজী হিসেবে আবেদন করুন</a>
+    <a href="join-kazi.html" class="btn" style="background:rgba(255,255,255,.12);color:var(--gl);border:1px solid rgba(232,197,71,.3)">আরও জানুন →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-brand-name">ইউনুস কাজী অফিস</div><p class="footer-brand-desc">ইসলামী শরিয়া অনুযায়ী বিশ্বাসযোগ্য ও পেশাদার নিকাহ সেবা।</p></div>
+    <div class="footer-col"><h4>দ্রুত লিংক</h4><ul><li><a href="index.html">হোম</a></li><li><a href="feedback.html">ফিডব্যাক</a></li><li><a href="join-kazi.html">কাজী যোগ দিন</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li></ul></div>
+    <div class="footer-col"><h4>সেবাসমূহ</h4><ul><li><a href="index.html#nikah">নিকাহ রেজিস্ট্রেশন</a></li><li><a href="index.html#nikah">তালাক সেবা</a></li><li><a href="index.html#nikah">কাবিননামা</a></li></ul></div>
+    <div class="footer-col"><h4>যোগাযোগ</h4><ul><li><a href="tel:+880XXXXXXXXXX">📞 হটলাইন</a></li><li><a href="https://wa.me/880XXXXXXXXXX">💬 WhatsApp</a></li><li><a href="index.html#booking">📅 বুকিং করুন</a></li></ul></div>
+  </div>
+  <hr class="footer-hr">
+  <div class="footer-bottom"><span>© ২০২৫ ইউনুস কাজী অফিস। সর্বস্বত্ব সংরক্ষিত।</span><div class="footer-socials"><a href="#">f</a><a href="https://wa.me/880XXXXXXXXXX">W</a><a href="#">▶</a></div></div>
+</footer>
+
+<script src="data/kazis.js"></script>
+<script src="script.js"></script>
+<script src="js/kazis.js"></script>
+</body>
+</html>

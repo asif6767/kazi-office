@@ -1,0 +1,276 @@
+/* ================================================================
+   css/service-detail.css — Service Detail Modal Styles
+   ================================================================ */
+
+/* ── MODAL CONTAINER ── */
+.sd-modal {
+  max-width: 720px;
+  width: 96%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 0;
+  border-radius: var(--r4);
+  position: relative;
+  background: var(--wh);
+  box-shadow: 0 20px 60px rgba(0,0,0,.22);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gp) transparent;
+}
+.sd-modal::-webkit-scrollbar { width: 5px; }
+.sd-modal::-webkit-scrollbar-thumb { background: var(--gp); border-radius: 9px; }
+
+/* ── CLOSE BUTTON ── */
+.sd-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  z-index: 20;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--bol);
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--ts);
+  margin: 12px 12px 0 0;
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--tr), color var(--tr);
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+.sd-close:hover { background: var(--gd); color: #fff; }
+
+/* ── HEADER ── */
+.sd-header {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 2rem 2rem 1.2rem;
+  border-bottom: 1px solid var(--bol);
+  background: linear-gradient(135deg, #FDF8EE, #F5EDD8);
+}
+.sd-icon {
+  font-size: 2.6rem;
+  width: 64px; height: 64px;
+  background: var(--wh);
+  border-radius: var(--r2);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--sh1);
+  flex-shrink: 0;
+}
+.sd-title {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--gd);
+  margin-bottom: .35rem;
+}
+.sd-law-badge {
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--gr);
+  background: rgba(201,151,10,.1);
+  border: 1px solid rgba(201,151,10,.25);
+  border-radius: 50px;
+  padding: .22rem .75rem;
+  display: inline-block;
+}
+
+/* ── LAW BOX ── */
+.sd-law-box {
+  margin: 1.4rem 2rem;
+  background: linear-gradient(135deg, #FFF8E6, #FFF3D5);
+  border: 1.5px solid rgba(201,151,10,.25);
+  border-left: 4px solid var(--gd);
+  border-radius: var(--r2);
+  padding: 1.1rem 1.3rem;
+}
+.sd-law-label {
+  font-size: .77rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--gr);
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+}
+.sd-law-text {
+  font-size: .875rem;
+  color: var(--tm);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ── SECTION ── */
+.sd-section {
+  padding: 0 2rem 1.4rem;
+}
+.sd-sec-title {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gd);
+  margin-bottom: 1rem;
+  padding-bottom: .45rem;
+  border-bottom: 1.5px solid var(--bol);
+}
+
+/* ── REQUIREMENTS GRID ── */
+.sd-req-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+  margin-bottom: .6rem;
+}
+.sd-req-row {
+  display: flex;
+  align-items: flex-start;
+  gap: .6rem;
+  font-size: .84rem;
+  color: var(--tm);
+  background: var(--gs);
+  border: 1px solid var(--bol);
+  border-radius: var(--r1);
+  padding: .6rem .8rem;
+  line-height: 1.55;
+}
+.sd-req-ic { font-size: 1.1rem; flex-shrink: 0; margin-top: .05rem; }
+
+/* ── FORM ── */
+.sd-form-grid {
+  gap: .85rem;
+  margin-bottom: 1.2rem;
+}
+.sd-inp {
+  width: 100%;
+  padding: .72rem 1rem;
+  border: 1.5px solid var(--bol);
+  border-radius: var(--r1);
+  font-family: inherit;
+  font-size: .88rem;
+  color: var(--td);
+  background: var(--wh);
+  outline: none;
+  transition: border var(--tr), box-shadow var(--tr);
+  box-sizing: border-box;
+}
+.sd-inp:focus { border-color: var(--gm); box-shadow: 0 0 0 3px rgba(201,151,10,.12); }
+.sd-inp.sd-error { border-color: #e05; }
+textarea.sd-inp { resize: vertical; min-height: 72px; }
+select.sd-inp { cursor: pointer; }
+
+/* ── SUBMIT ── */
+.sd-submit {
+  width: 100%;
+  padding: .95rem;
+  background: linear-gradient(135deg, var(--gr), var(--gd));
+  color: #fff;
+  border: none;
+  border-radius: var(--r2);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(139,105,20,.3);
+  transition: transform var(--tr), box-shadow var(--tr), opacity var(--tr);
+  position: relative; overflow: hidden;
+}
+.sd-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(139,105,20,.38); }
+.sd-submit:disabled { opacity: .65; cursor: not-allowed; transform: none; }
+
+/* ── MESSAGES ── */
+.sd-msg {
+  margin: 1rem 2rem 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--r2);
+  font-size: .88rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.sd-msg-success {
+  background: #e6f9f0;
+  color: #1a6b43;
+  border: 1.5px solid #a5d9be;
+}
+.sd-msg-error {
+  background: #fef2f2;
+  color: #c0392b;
+  border: 1.5px solid #f5c6c6;
+}
+
+@media (max-width: 600px) {
+  .sd-header { padding: 1.4rem 1.2rem 1rem; }
+  .sd-section { padding: 0 1.2rem 1.2rem; }
+  .sd-law-box { margin: 1.2rem 1.2rem; }
+  .sd-req-grid { grid-template-columns: 1fr; }
+  .sd-msg { margin: 1rem 1.2rem 1.2rem; }
+}
+
+/* ── UPLOAD SECTION ── */
+.sd-upload-lbl {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  cursor: pointer;
+  background: var(--cd);
+  border: 2px dashed var(--bo);
+  border-radius: var(--r2);
+  padding: 1.1rem 1.3rem;
+  transition: all var(--tr);
+  margin-bottom: .75rem;
+}
+.sd-upload-lbl:hover { background: var(--gs); border-color: var(--gr); }
+.sd-upload-lbl input[type="file"] { display: none; }
+.sd-up-icon { font-size: 1.6rem; flex-shrink: 0; }
+.sd-up-text span { font-weight: 600; color: var(--gd); display: block; font-size: .88rem; }
+.sd-up-text small { font-size: .74rem; color: var(--ts); margin-top: .15rem; display: block; }
+
+/* ── UPLOAD PREVIEWS ── */
+.sd-upload-prev {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: .4rem;
+}
+.sd-up-item {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  background: var(--wh);
+  border: 1.5px solid var(--gp);
+  border-radius: var(--r2);
+  padding: .5rem .7rem;
+  min-width: 0;
+  max-width: 100%;
+}
+.sd-thumb {
+  width: 44px; height: 44px;
+  object-fit: cover;
+  border-radius: var(--r1);
+  cursor: pointer;
+  flex-shrink: 0;
+  border: 1px solid var(--bol);
+}
+.sd-doc-ic { font-size: 2rem; flex-shrink: 0; }
+.sd-up-meta { flex: 1; min-width: 0; }
+.sd-up-name {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--gd);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sd-up-size { font-size: .7rem; color: var(--ts); margin-top: .1rem; }
+.sd-up-remove {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--bol);
+  background: var(--wh);
+  cursor: pointer;
+  font-size: .8rem;
+  color: var(--ts);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--tr), color var(--tr);
+}
+.sd-up-remove:hover { background: #fee; color: #c00; }

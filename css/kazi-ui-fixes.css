@@ -1,0 +1,126 @@
+/* ================================================================
+   css/kazi-ui-fixes.css
+   TARGETED fixes ONLY for the marked areas in the screenshots.
+   Everything else stays exactly as in the original zip.
+   ================================================================ */
+
+/* ══════════════════════════════════════════════════════
+   FIX A — kazi-profile.html (RED CIRCLE in screenshot)
+   Problem 1: "প্রধান কাজী ও প্রতিষ্ঠাতা" badge was appearing
+               TWICE (once as profile-chief-crown + once as
+               profile-role-lbl via avail-badge duplicate).
+   Problem 2: Name font-size was a touch too large and
+               pushed layout.
+   ══════════════════════════════════════════════════════ */
+
+/* Chief crown badge — elegant pill above the role label */
+.profile-chief-crown {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gr), var(--gd));
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: .28rem .95rem;
+  border-radius: 50px;
+  margin-bottom: .55rem;
+  box-shadow: 0 3px 10px rgba(139,105,20,.35);
+}
+
+/* Role label below chief crown — readable, not all-caps */
+.profile-role-lbl {
+  font-size: .84rem !important;
+  font-weight: 600 !important;
+  letter-spacing: .4px !important;
+  text-transform: none !important;
+  color: rgba(255,255,255,.75) !important;
+  margin-bottom: .3rem !important;
+  display: block;
+}
+
+/* Name: slightly smaller so it doesn't overwhelm the layout */
+.profile-name {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: clamp(1.55rem, 2.8vw, 2.1rem) !important;
+  font-weight: 900;
+  color: var(--gl) !important;
+  line-height: 1.2;
+  margin-bottom: .38rem;
+}
+
+/* Availability pill — single line, compact */
+.profile-avail {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,.88);
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  padding: .28rem .82rem;
+  border-radius: 50px;
+  margin-bottom: 1.1rem;
+}
+
+/* Level badge on dark profile hero */
+.profile-info .level-badge {
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--gl) !important;
+  background: rgba(255,255,255,.1) !important;
+  border: 1px solid rgba(255,255,255,.2) !important;
+  border-radius: 50px;
+  padding: .22rem .75rem;
+}
+
+/* ══════════════════════════════════════════════════════
+   FIX B — kazis.html (GREEN CIRCLE in screenshot)
+   Problem: The bio text below the rating on the chief
+            card and team kazi cards was not clearly
+            separated from the rating row — needs just
+            a small top-margin and better line-height
+            for a world-class feel.
+   ══════════════════════════════════════════════════════ */
+
+/* Chief kazi bio — clearly separated, well-spaced */
+.chief-bio {
+  font-size: .9rem !important;
+  color: var(--tm) !important;
+  line-height: 1.9 !important;
+  margin-top: .85rem !important;
+  margin-bottom: 1.2rem !important;
+  padding-top: .75rem;
+  border-top: 1px solid rgba(201,151,10,.12);
+}
+
+/* Team kazi card bio — clamp to 3 lines, readable on dark card */
+.kc-bio {
+  font-size: .84rem !important;
+  color: rgba(255,255,255,.78) !important;
+  line-height: 1.82 !important;
+  margin-top: .65rem !important;
+  margin-bottom: .9rem !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-top: .55rem;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+
+/* Chief role label — keep Bengali readability */
+.chief-role {
+  font-size: .8rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .3px !important;
+  text-transform: none !important;
+}
+
+/* Team card role label — readable */
+.kc-role {
+  font-size: .78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .3px !important;
+  text-transform: none !important;
+}

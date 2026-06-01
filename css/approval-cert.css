@@ -1,0 +1,219 @@
+/* ================================================================
+   css/approval-cert.css — Approval & Certificate Modal Styles
+   ================================================================ */
+
+/* ── MODAL ── */
+.ac-modal {
+  max-width: 680px;
+  width: 96%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 0;
+  border-radius: var(--r4);
+  background: var(--wh);
+  box-shadow: 0 20px 60px rgba(0,0,0,.22);
+  position: relative;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gp) transparent;
+}
+.ac-modal::-webkit-scrollbar { width: 5px; }
+.ac-modal::-webkit-scrollbar-thumb { background: var(--gp); border-radius: 9px; }
+
+/* ── CLOSE ── */
+.ac-close {
+  position: sticky;
+  top: 0;
+  float: right;
+  z-index: 20;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--bol);
+  border-radius: 50%;
+  width: 36px; height: 36px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--ts);
+  margin: 12px 12px 0 0;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  transition: background var(--tr), color var(--tr);
+}
+.ac-close:hover { background: var(--gd); color: #fff; }
+
+/* ── HEADER ── */
+.ac-header {
+  padding: 2rem 2rem 1.5rem;
+  display: flex;
+  gap: 1.3rem;
+  align-items: flex-start;
+}
+.ac-header-icon {
+  font-size: 2.8rem;
+  width: 68px; height: 68px;
+  background: rgba(255,255,255,.75);
+  border-radius: var(--r2);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(0,0,0,.1);
+}
+.ac-badge {
+  display: inline-block;
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: .22rem .82rem;
+  border-radius: 50px;
+  margin-bottom: .45rem;
+}
+.ac-title {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--gd);
+  margin-bottom: .45rem;
+}
+.ac-sub {
+  font-size: .865rem;
+  color: var(--tm);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── BODY ── */
+.ac-body {
+  padding: 1.5rem 2rem 2rem;
+}
+
+/* ── CERT WRAP ── */
+.ac-cert-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+}
+.ac-cert-img {
+  border-radius: var(--r3);
+  overflow: hidden;
+  border: 1.5px solid var(--bol);
+  min-height: 180px;
+  display: flex; align-items: center; justify-content: center;
+}
+.ac-cert-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ac-cert-ph {
+  display: flex; flex-direction: column; align-items: center;
+  gap: .45rem;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--gs), var(--cde));
+}
+.ac-cert-ph-title {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--gd);
+}
+.ac-cert-ph-note {
+  font-size: .75rem;
+  color: var(--tm);
+  line-height: 1.55;
+}
+.ac-cert-ph-path {
+  font-size: .65rem;
+  color: var(--ts);
+  opacity: .6;
+  font-family: monospace;
+}
+
+/* ── CERT META ── */
+.ac-cert-meta {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  justify-content: center;
+}
+.ac-meta-row {
+  display: flex;
+  flex-direction: column;
+  padding: .55rem .7rem;
+  background: var(--gs);
+  border: 1px solid var(--bol);
+  border-radius: var(--r1);
+}
+.ac-meta-lbl {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--gr);
+  margin-bottom: .15rem;
+}
+.ac-meta-val {
+  font-size: .84rem;
+  color: var(--td);
+  font-weight: 600;
+}
+
+/* ── LAW SECTION ── */
+.ac-law-section {
+  background: linear-gradient(135deg, #FFF8E6, #FFF3D5);
+  border: 1.5px solid rgba(201,151,10,.25);
+  border-left: 4px solid var(--gd);
+  border-radius: var(--r2);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.6rem;
+}
+.ac-law-title {
+  font-size: .84rem;
+  font-weight: 700;
+  color: var(--gr);
+  margin-bottom: .8rem;
+}
+.ac-law-list {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+.ac-law-list li {
+  font-size: .875rem;
+  color: var(--tm);
+  line-height: 1.75;
+  margin-bottom: .4rem;
+}
+.ac-law-list li:last-child { margin-bottom: 0; }
+
+/* ── FOOTER BUTTONS ── */
+.ac-footer-btns {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+/* ── CERT CARD ARROW (on about page) ── */
+.cert-card { position: relative; transition: transform var(--tr), box-shadow var(--tr), border-color var(--tr); }
+.cert-card:hover { border-color: var(--gm) !important; }
+.cert-arrow {
+  position: absolute;
+  right: .9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gr);
+  font-size: 1.1rem;
+  opacity: .5;
+  transition: opacity var(--tr), transform var(--tr);
+}
+.cert-card:hover .cert-arrow {
+  opacity: 1;
+  transform: translateY(-50%) translateX(3px);
+}
+
+@media (max-width: 580px) {
+  .ac-header { padding: 1.4rem 1.2rem 1.2rem; flex-direction: column; gap: .8rem; }
+  .ac-body { padding: 1.2rem 1.2rem 1.5rem; }
+  .ac-cert-wrap { grid-template-columns: 1fr; }
+}

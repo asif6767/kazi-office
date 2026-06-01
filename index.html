@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="ইউনুস কাজী অফিস — ইসলামী শরিয়া অনুযায়ী বিশ্বস্ত ও পেশাদার নিকাহ ও বৈবাহিক সেবা।">
+<meta name="theme-color" content="#C9970A">
+<meta property="og:title" content="ইউনুস কাজী অফিস">
+<meta property="og:description" content="ইসলামী শরিয়া অনুযায়ী বিশ্বস্ত ও পেশাদার নিকাহ ও বৈবাহিক সেবা।">
+<title>ইউনুস কাজী অফিস</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/service-detail.css">
+<!-- EmailJS for service forms -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-brand"><div class="brand-dot"></div>ইউনুস কাজী অফিস</a>
+  <ul class="nav-links">
+    <li><a href="#nikah">নিকাহ সেবা</a></li>
+    <li><a href="kazis.html">আমাদের কাজীরা</a></li>
+    <li><a href="feedback.html">ফিডব্যাক</a></li>
+    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+    <li><a href="#contact">যোগাযোগ</a></li>
+    <li><a href="#booking" class="nav-book">বুকিং করুন</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#nikah" onclick="closeMobileNav()">নিকাহ সেবা</a>
+  <a href="kazis.html" onclick="closeMobileNav()">আমাদের কাজীরা</a>
+  <a href="feedback.html" onclick="closeMobileNav()">ফিডব্যাক</a>
+  <a href="about.html" onclick="closeMobileNav()">আমাদের সম্পর্কে</a>
+  <a href="#contact" onclick="closeMobileNav()">যোগাযোগ</a>
+  <a href="join-kazi.html" onclick="closeMobileNav()" style="color:var(--gm);font-weight:600">✦ কাজী হিসেবে যোগ দিন</a>
+  <a href="#booking" onclick="closeMobileNav()" style="color:var(--gd);font-weight:700">→ বুকিং করুন</a>
+</nav>
+
+<section id="hero">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <svg class="floral" viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#C9970A" stroke-width="1.2" opacity="0.7">
+      <path d="M10,380 Q60,290 130,230 Q175,190 215,130 Q240,95 260,40"/>
+      <path d="M-5,360 Q45,270 110,210 Q155,170 195,110"/>
+      <circle cx="260" cy="40" r="22" fill="rgba(201,151,10,0.12)"/><circle cx="260" cy="40" r="13" fill="rgba(201,151,10,0.2)"/><circle cx="260" cy="40" r="5" fill="rgba(201,151,10,0.45)"/>
+      <path d="M260,18 Q272,29 260,40 Q248,29 260,18"/><path d="M260,62 Q272,51 260,40 Q248,51 260,62"/>
+      <path d="M238,40 Q249,28 260,40 Q249,52 238,40"/><path d="M282,40 Q271,28 260,40 Q271,52 282,40"/>
+      <circle cx="130" cy="230" r="14" fill="rgba(201,151,10,0.10)"/>
+      <path d="M130,218 Q138,224 130,230 Q122,224 130,218"/><path d="M130,242 Q138,236 130,230 Q122,236 130,242"/>
+      <path d="M118,230 Q124,222 130,230 Q124,238 118,230"/><path d="M142,230 Q136,222 130,230 Q136,238 142,230"/>
+    </g>
+  </svg>
+  <div class="hcontent">
+    <div class="hbadge"><span class="bdot"></span>বিশ্বস্ত ও সরকার অনুমোদিত</div>
+    <h1 class="htitle">বিশ্বাসযোগ্য<br>আপনাদের ইউনুস কাজী</h1>
+    <p class="hsub">ইসলামী শরিয়া অনুযায়ী বিবাহ বন্ধনে আবদ্ধ ও ডিভোর্স করানো হয়। সম্পূর্ণ বৈধ, নির্ভরযোগ্য ও পেশাদার সেবা।</p>
+    <div class="hbtns">
+      <a href="kazis.html" class="btn btn-primary btn-lg">আমাদের কাজীরা দেখুন</a>
+      <a href="#nikah" class="btn btn-outline btn-lg">সেবাসমূহ</a>
+    </div>
+  </div>
+  <div class="hvisual">
+    <div class="hframe">
+      <!-- To add kazi photo: replace div.hph with: <img src="assets/kazi-younus.jpg" alt="ইউনুস কাজী" class="hphoto"> -->
+      <div class="hph">
+        <svg width="58" height="58" viewBox="0 0 64 64" fill="none"><rect x="6" y="6" width="52" height="52" rx="10" stroke="#C9970A" stroke-width="1.5" stroke-dasharray="6 3"/><circle cx="32" cy="24" r="9" stroke="#C9970A" stroke-width="1.5"/><path d="M12 52 Q22 38 32 37 Q42 38 52 52" stroke="#C9970A" stroke-width="1.5" fill="none"/></svg>
+        <span>কাজী সাহেবের ছবি</span><span style="font-size:.7rem;opacity:.45">assets/kazi-younus.jpg</span>
+      </div>
+      <div class="hfloat"><span class="hfi">🏅</span><div class="hft"><strong>২৫+ বছর অভিজ্ঞতা</strong>সরকার নিবন্ধিত কাজী</div></div>
+    </div>
+  </div>
+</section>
+
+<div id="trust">
+  <div class="ti">✅ সরকার অনুমোদিত</div><div class="tdiv"></div>
+  <div class="ti">🕌 ইসলামী শরিয়া</div><div class="tdiv"></div>
+  <div class="ti">📜 তাৎক্ষণিক সনদ</div><div class="tdiv"></div>
+  <div class="ti">🏠 গৃহে সেবা</div><div class="tdiv"></div>
+  <div class="ti">🔒 সম্পূর্ণ গোপনীয়</div><div class="tdiv"></div>
+  <div class="ti">⭐ ৪.৯ গড় রেটিং</div>
+</div>
+<div class="sec-separator"></div>
+<div class="stats-ribbon">
+  <div class="stat-item"><div class="stat-num" data-count="5200" data-suffix="+">০</div><div class="stat-label">সফল নিকাহ</div></div>
+  <div class="stat-item"><div class="stat-num" data-count="25" data-suffix="+">০</div><div class="stat-label">বছরের অভিজ্ঞতা</div></div>
+  <div class="stat-item"><div class="stat-num" data-count="4" data-suffix="জন">০</div><div class="stat-label">দক্ষ কাজী</div></div>
+  <div class="stat-item"><div class="stat-num" data-count="15" data-suffix="">০</div><div class="stat-label">জেলায় সেবা</div></div>
+</div>
+<div class="ql-banner">
+  <a href="kazis.html" class="ql-btn">👨‍💼 আমাদের কাজীরা</a>
+  <a href="feedback.html" class="ql-btn">📸 ফিডব্যাক ও ছবি</a>
+  <a href="join-kazi.html" class="ql-btn">🤲 কাজী হিসেবে যোগ দিন</a>
+  <a href="about.html" class="ql-btn">ℹ আমাদের সম্পর্কে</a>
+  <a href="#faq" class="ql-btn">❓ সাধারণ জিজ্ঞাসা</a>
+</div>
+
+<section id="nikah" class="section-pad section-transition-top">
+  <div class="sec-hdr"><div class="tag">আমাদের সেবা</div><h2 class="sec-title">নিকাহ ও আইনি সেবাসমূহ</h2><p class="sec-desc">ইসলামী শরিয়া ও বাংলাদেশের প্রচলিত আইন অনুযায়ী সকল বৈবাহিক সেবা।</p></div>
+  <div class="svgrid">
+    <div class="svcard reveal"><div class="svic">💍</div><h3>নিকাহ রেজিস্ট্রেশন</h3><p>ইসলামী রীতি ও সরকারি নিয়ম মেনে বিবাহ নিবন্ধন সম্পন্ন। কাবিননামা ও সনদ প্রদান।</p><span class="svlnk">বিস্তারিত →</span></div>
+    <div class="svcard reveal"><div class="svic">📜</div><h3>তালাক ও ডিভোর্স</h3><p>শরিয়াসম্মত তালাক প্রক্রিয়া সম্পন্ন করা হয়। খুলা ও মুবারাত সেবাও প্রদান করা হয়।</p><span class="svlnk">বিস্তারিত →</span></div>
+    <div class="svcard reveal"><div class="svic">📋</div><h3>কাবিননামা প্রস্তুত</h3><p>বিবাহের কাবিননামা আইনানুগভাবে তৈরি ও সত্যায়িত। মহর নির্ধারণে পরামর্শ।</p><span class="svlnk">বিস্তারিত →</span></div>
+    <div class="svcard reveal"><div class="svic">🏛️</div><h3>বিবাহ সনদ ও নোটারি</h3><p>সরকারি স্বীকৃত বিবাহ সনদ। প্রয়োজনে নোটারি ও এফিডেভিট সেবা পাওয়া যায়।</p><span class="svlnk">বিস্তারিত →</span></div>
+    <div class="svcard reveal"><div class="svic">👨‍👩‍👧</div><h3>দ্বিতীয় বিবাহ অনুমোদন</h3><p>সালিশি বোর্ডের মাধ্যমে দ্বিতীয় বিবাহের আইনি অনুমোদন প্রক্রিয়া।</p><span class="svlnk">বিস্তারিত →</span></div>
+    <div class="svcard reveal"><div class="svic">🤝</div><h3>পরামর্শ সেবা</h3><p>বৈবাহিক যেকোনো সমস্যায় শরিয়া ও আইনি পরামর্শ। গোপনীয়তা সম্পূর্ণ নিশ্চিত।</p><span class="svlnk">বিস্তারিত →</span></div>
+  </div>
+</section>
+
+<section id="how" class="section-pad">
+  <div class="sec-hdr"><div class="tag">পদ্ধতি</div><h2 class="sec-title">কিভাবে কাজ করে</h2><p class="sec-desc">মাত্র কয়েকটি সহজ ধাপে আপনার কাজ সম্পন্ন হবে।</p></div>
+  <div class="howlay">
+    <div class="stepslist">
+      <div class="step reveal"><div class="stepn">১</div><div class="stepb"><h3>যোগাযোগ বা বুকিং</h3><p>ফোন, WhatsApp বা অনলাইন ফর্মের মাধ্যমে যোগাযোগ করুন।</p></div></div>
+      <div class="step reveal"><div class="stepn">২</div><div class="stepb"><h3>কাজী বেছে নিন</h3><p>আমাদের কাজী পেজ থেকে রেটিং ও প্রোফাইল দেখে পছন্দের কাজী বুক করুন।</p></div></div>
+      <div class="step reveal"><div class="stepn">৩</div><div class="stepb"><h3>কাগজপত্র প্রস্তুত করুন</h3><p>NID, জন্ম নিবন্ধন ও প্রয়োজনীয় দলিলপত্র প্রস্তুত রাখুন।</p></div></div>
+      <div class="step reveal"><div class="stepn">৪</div><div class="stepb"><h3>নিকাহ সম্পন্ন ও সনদ</h3><p>শরিয়াসম্মত পদ্ধতিতে নিকাহ সম্পন্ন হয় এবং তাৎক্ষণিকভাবে সনদ প্রদান।</p></div></div>
+    </div>
+    <div class="docsbox reveal">
+      <h4>📋 প্রয়োজনীয় কাগজপত্র</h4>
+      <div class="doclist">
+        <div class="docrow"><span>🪪</span>জাতীয় পরিচয়পত্র (উভয়পক্ষ)<div class="dchk">✓</div></div>
+        <div class="docrow"><span>📄</span>জন্ম নিবন্ধন সনদ<div class="dchk">✓</div></div>
+        <div class="docrow"><span>📸</span>পাসপোর্ট সাইজ ছবি (৩ কপি)<div class="dchk">✓</div></div>
+        <div class="docrow"><span>👨‍👩‍👧</span>অভিভাবকের সম্মতিপত্র<div class="dchk">✓</div></div>
+        <div class="docrow"><span>📜</span>পূর্ব বিবাহের তালাকনামা (প্রযোজ্য)<div class="dchk">✓</div></div>
+        <div class="docrow"><span>🏠</span>বসবাসের প্রমাণপত্র<div class="dchk">✓</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="section-pad">
+  <div class="bklay">
+    <div class="bkinfo">
+      <div class="tag">অনলাইন বুকিং</div>
+      <h2 class="sec-title" style="color:var(--gl)">বুকিং করুন</h2>
+      <p style="color:rgba(255,255,255,.7);margin-bottom:1.4rem;font-size:.94rem">আজই আপনার পছন্দের কাজী বুক করুন।</p>
+      <h3>কেন আমাদের বেছে নেবেন?</h3>
+      <div class="perklist">
+        <div class="perk"><div class="peric">⚡</div>দ্রুত ও ঝামেলামুক্ত প্রক্রিয়া</div>
+        <div class="perk"><div class="peric">🔐</div>সম্পূর্ণ গোপনীয়তা নিশ্চিত</div>
+        <div class="perk"><div class="peric">🏠</div>বাড়িতে সেবার সুবিধা</div>
+        <div class="perk"><div class="peric">📜</div>তাৎক্ষণিক সনদ প্রদান</div>
+        <div class="perk"><div class="peric">💬</div>২৪/৭ WhatsApp সাপোর্ট</div>
+      </div>
+      <div class="qclist">
+        <div class="qc">📞 <a href="tel:+880XXXXXXXXXX">+৮৮০ XXXX-XXXXXX</a></div>
+        <div class="qc">💬 <a href="https://wa.me/880XXXXXXXXXX" target="_blank">WhatsApp মেসেজ করুন</a></div>
+      </div>
+    </div>
+    <div class="bkcard form-dark">
+      <h3>📅 বুকিং ফর্ম</h3>
+      <div class="fgrid">
+        <div class="form-field"><label>বরের নাম <span class="req">*</span></label><input id="hGroom" type="text" placeholder="বরের পূর্ণ নাম"></div>
+        <div class="form-field"><label>কনের নাম <span class="req">*</span></label><input id="hBride" type="text" placeholder="কনের পূর্ণ নাম"></div>
+        <div class="form-field"><label>মোবাইল <span class="req">*</span></label><input id="hPhone" type="tel" placeholder="01XXXXXXXXX"></div>
+        <div class="form-field"><label>পছন্দের কাজী</label>
+          <select id="hKazi"><option value="">— যেকোনো কাজী —</option></select></div>
+        <div class="form-field"><label>সেবার ধরন <span class="req">*</span></label>
+          <select id="hService"><option value="">— সেবা বেছে নিন —</option>
+            <option>নিকাহ রেজিস্ট্রেশন</option><option>তালাক সেবা</option>
+            <option>কাবিননামা</option><option>বিবাহ সনদ</option><option>পরামর্শ সেবা</option></select></div>
+        <div class="form-field"><label>তারিখ <span class="req">*</span></label><input id="hDate" type="date"></div>
+        <div class="form-field full"><label>বার্তা</label><textarea id="hNote" rows="2" placeholder="অতিরিক্ত কোনো তথ্য..."></textarea></div>
+      </div>
+      <button class="bksub" onclick="submitHomeBooking()">✔ বুকিং নিশ্চিত করুন</button>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="section-pad">
+  <div class="revhdr">
+    <div><div class="tag">প্রতিক্রিয়া</div><h2 class="sec-title">গ্রাহকরা বলেন</h2></div>
+    <a href="feedback.html" class="btn btn-ghost">সব ফিডব্যাক →</a>
+  </div>
+  <div class="revgrid" id="homeRevGrid"></div>
+  <div class="revnote">আপনার অভিজ্ঞতা শেয়ার করুন! <a href="feedback.html" style="color:var(--gr);font-weight:600">ফিডব্যাক দিন →</a></div>
+</section>
+
+<section id="gallery" class="section-pad">
+  <div class="sec-hdr center"><div class="tag">বিবাহের স্মৃতি</div><h2 class="sec-title">বিবাহের ছবিসমূহ</h2><p class="sec-desc" style="margin:0 auto">আমাদের অফিসে সম্পন্ন নিকাহের কিছু বিশেষ মুহূর্ত।</p></div>
+  <div class="galgrid">
+    <!-- To add photos: replace div.galph with <img src="assets/wedding-N.jpg" alt="..."> -->
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">💍</div>বিবাহের ছবি ১<br><small style="opacity:.45">assets/wedding-1.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">🌸</div>বিবাহের ছবি ২<br><small style="opacity:.45">assets/wedding-2.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">📸</div>বিবাহের ছবি ৩<br><small style="opacity:.45">assets/wedding-3.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">🤲</div>বিবাহের ছবি ৪<br><small style="opacity:.45">assets/wedding-4.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gd),var(--gm))"><a href="feedback.html" style="color:#fff;text-align:center;font-weight:700;font-size:.9rem;padding:1rem">📸 আরও ছবি<br>→ ফিডব্যাক পেজ</a></div>
+  </div>
+</section>
+
+<section id="faq" class="section-pad" style="background:var(--cd)">
+  <div class="sec-hdr"><div class="tag">প্রশ্নোত্তর</div><h2 class="sec-title">সাধারণ জিজ্ঞাসা</h2></div>
+  <div style="max-width:730px">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">নিকাহ রেজিস্ট্রেশনের জন্য কী কী কাগজপত্র লাগবে?<div class="faq-icon">+</div></button><div class="faq-a">বর ও কনের জাতীয় পরিচয়পত্র, জন্ম নিবন্ধন সনদ, পাসপোর্ট সাইজ ছবি (৩ কপি), অভিভাবকের সম্মতিপত্র এবং প্রয়োজনে বিগত বিবাহের তালাকনামা।</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">কোন কাজীকে বুকিং করব কীভাবে বুঝব?<div class="faq-icon">+</div></button><div class="faq-a">আমাদের <a href="kazis.html" style="color:var(--gr)">কাজীদের পেজে</a> প্রতিটি কাজীর প্রোফাইল, রেটিং, অভিজ্ঞতা ও সময়সূচি দেখুন এবং পছন্দমতো বুক করুন।</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">বাড়িতে এসে নিকাহ পড়ানো কি সম্ভব?<div class="faq-icon">+</div></button><div class="faq-a">হ্যাঁ, বিশেষ ব্যবস্থায় বাড়ি, কমিউনিটি হল বা মসজিদে এসে নিকাহ সম্পন্ন করা হয়।</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">প্রবাসীরা কীভাবে সেবা পাবেন?<div class="faq-icon">+</div></button><div class="faq-a">প্রবাসীরা WhatsApp বা ভিডিও কলের মাধ্যমে যোগাযোগ করতে পারেন। পাওয়ার অব অ্যাটর্নি দিয়েও কার্যক্রম পরিচালনা সম্ভব।</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">নতুন কাজী হিসেবে কীভাবে যোগ দেব?<div class="faq-icon">+</div></button><div class="faq-a">আমাদের <a href="join-kazi.html" style="color:var(--gr)">কাজী যোগদান পেজে</a> গিয়ে আপনার CV ও প্রয়োজনীয় তথ্য জমা দিন।</div></div>
+  </div>
+</section>
+
+<section id="contact" class="section-pad">
+  <div class="sec-hdr"><div class="tag">যোগাযোগ</div><h2 class="sec-title">আমাদের সাথে যোগাযোগ করুন</h2></div>
+  <div class="conlay">
+    <div class="concards">
+      <div class="concard reveal"><div class="conic">📍</div><div><div class="conlbl">অফিসের ঠিকানা</div><div class="conval">[আপনার পূর্ণ ঠিকানা], ঢাকা</div></div></div>
+      <div class="concard reveal"><div class="conic">📞</div><div><div class="conlbl">মোবাইল / হটলাইন</div><div class="conval"><a href="tel:+880XXXXXXXXXX">+৮৮০ XXXX-XXXXXX</a></div></div></div>
+      <div class="concard reveal"><div class="conic">💬</div><div><div class="conlbl">WhatsApp</div><div class="conval"><a href="https://wa.me/880XXXXXXXXXX" target="_blank">WhatsApp-এ মেসেজ করুন</a></div></div></div>
+      <div class="concard reveal"><div class="conic">📧</div><div><div class="conlbl">ইমেইল</div><div class="conval"><a href="mailto:classr489@gmail.com">classr489@gmail.com</a></div></div></div>
+      <div class="concard reveal"><div class="conic">🕐</div><div><div class="conlbl">অফিস সময়</div><div class="conval">শনি–বৃহস্পতি: ৯টা–৭টা | শুক্র: ৩টা–৭টা</div></div></div>
+    </div>
+    <div class="mapbox reveal" onclick="window.open('https://maps.google.com','_blank')">
+      <svg width="46" height="46" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="24" stroke="#C9970A" stroke-width="1.5" stroke-dasharray="5 3"/><circle cx="26" cy="22" r="7" stroke="#C9970A" stroke-width="1.5"/><path d="M26 29 L26 44" stroke="#C9970A" stroke-width="1.5"/></svg>
+      Google Maps এখানে যোগ করুন<br><small style="opacity:.45;font-size:.73rem">iframe embed দিয়ে replace করুন</small>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-brand-name">ইউনুস কাজী অফিস</div><p class="footer-brand-desc">ইসলামী শরিয়া অনুযায়ী বিশ্বাসযোগ্য, পেশাদার ও আইনসম্মত নিকাহ ও বৈবাহিক সেবা প্রদানে প্রতিশ্রুতিবদ্ধ।</p></div>
+    <div class="footer-col"><h4>দ্রুত লিংক</h4><ul><li><a href="kazis.html">আমাদের কাজীরা</a></li><li><a href="feedback.html">ফিডব্যাক</a></li><li><a href="join-kazi.html">কাজী যোগ দিন</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li></ul></div>
+    <div class="footer-col"><h4>সেবাসমূহ</h4><ul><li><a href="#nikah">নিকাহ রেজিস্ট্রেশন</a></li><li><a href="#nikah">তালাক সেবা</a></li><li><a href="#nikah">কাবিননামা</a></li><li><a href="#nikah">পরামর্শ সেবা</a></li></ul></div>
+    <div class="footer-col"><h4>যোগাযোগ</h4><ul><li><a href="tel:+880XXXXXXXXXX">📞 হটলাইন</a></li><li><a href="https://wa.me/880XXXXXXXXXX">💬 WhatsApp</a></li><li><a href="mailto:classr489@gmail.com">📧 ইমেইল</a></li><li><a href="#booking">📅 বুকিং করুন</a></li></ul></div>
+  </div>
+  <hr class="footer-hr">
+  <div class="footer-bottom"><span>© ২০২৫ ইউনুস কাজী অফিস। সর্বস্বত্ব সংরক্ষিত।</span><div class="footer-socials"><a href="#">f</a><a href="https://wa.me/880XXXXXXXXXX">W</a><a href="#">▶</a></div></div>
+</footer>
+
+<script src="data/kazis.js"></script>
+<script src="script.js"></script>
+<script src="js/index.js"></script>
+<script>emailjs.init({publicKey:'off2fO4OdEsS111Xk'});</script>
+<script src="js/service-detail.js"></script>
+</body>
+</html>

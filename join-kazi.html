@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>কাজী হিসেবে যোগ দিন — ইউনুস কাজী অফিস</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<!-- EmailJS for real email sending -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<link rel="stylesheet" href="css/join-kazi.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-brand"><div class="brand-dot"></div>ইউনুস কাজী অফিস</a>
+  <ul class="nav-links">
+    <li><a href="index.html#nikah">নিকাহ সেবা</a></li>
+    <li><a href="kazis.html">আমাদের কাজীরা</a></li>
+    <li><a href="feedback.html">ফিডব্যাক</a></li>
+    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+    <li><a href="index.html#contact">যোগাযোগ</a></li>
+    <li><a href="index.html#booking" class="nav-book">বুকিং করুন</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" onclick="closeMobileNav()">হোম</a>
+  <a href="kazis.html" onclick="closeMobileNav()">আমাদের কাজীরা</a>
+  <a href="feedback.html" onclick="closeMobileNav()">ফিডব্যাক</a>
+  <a href="about.html" onclick="closeMobileNav()">আমাদের সম্পর্কে</a>
+  <a href="kazis.html" onclick="closeMobileNav()">আমাদের কাজীরা</a>
+  <a href="feedback.html" onclick="closeMobileNav()">ফিডব্যাক</a>
+  <a href="about.html" onclick="closeMobileNav()">আমাদের সম্পর্কে</a>
+  <a href="index.html#booking" onclick="closeMobileNav()" style="color:var(--gd);font-weight:700">→ বুকিং করুন</a>
+</nav>
+
+<div class="page-hero"><div class="geo-pattern"></div>
+  <div class="breadcrumb"><a href="index.html">হোম</a><span class="sep">›</span><span>কাজী হিসেবে যোগ দিন</span></div>
+  <h1>কাজী হিসেবে যোগ দিন</h1>
+  <p>আপনার CV ও প্রয়োজনীয় তথ্য জমা দিন। পর্যালোচনার পর আপনার ইমেইলে নিশ্চিতকরণ পাঠানো হবে।</p>
+</div>
+
+<section style="background:var(--cd);padding:62px 5%">
+  <div class="join-layout">
+
+    <!-- FORM -->
+    <div class="join-form-card reveal">
+      <div class="jfh">
+        <h2>📋 আবেদন ফর্ম</h2>
+        <p>সকল তথ্য সঠিকভাবে পূরণ করুন। <span style="color:var(--gl)">*</span> চিহ্নিত ঘরগুলো অবশ্যই পূরণ করতে হবে।</p>
+      </div>
+      <div class="jfb">
+
+        <div class="fsec-title">👤 ব্যক্তিগত তথ্য</div>
+        <div class="fgrid">
+          <div class="form-field"><label>পূর্ণ নাম (বাংলায়) <span class="req">*</span></label><input id="jName" type="text" placeholder="আপনার পূর্ণ নাম"></div>
+          <div class="form-field"><label>Full Name (English) <span class="req">*</span></label><input id="jNameEn" type="text" placeholder="Full name in English"></div>
+          <div class="form-field"><label>মোবাইল নম্বর <span class="req">*</span></label><input id="jPhone" type="tel" placeholder="01XXXXXXXXX"></div>
+          <div class="form-field"><label>ইমেইল ঠিকানা <span class="req">*</span></label><input id="jEmail" type="email" placeholder="yourname@email.com"></div>
+          <div class="form-field"><label>জাতীয় পরিচয়পত্র নং <span class="req">*</span></label><input id="jNID" type="text" placeholder="NID নম্বর লিখুন"></div>
+          <div class="form-field"><label>জন্ম তারিখ <span class="req">*</span></label><input id="jDOB" type="date"></div>
+          <div class="form-field full"><label>বর্তমান ঠিকানা <span class="req">*</span></label><textarea id="jAddress" rows="2" placeholder="বিস্তারিত ঠিকানা লিখুন..."></textarea></div>
+        </div>
+
+        <div class="fsec-title">🎓 শিক্ষাগত ও পেশাগত যোগ্যতা</div>
+        <div class="fgrid">
+          <div class="form-field"><label>সর্বোচ্চ শিক্ষাগত যোগ্যতা <span class="req">*</span></label><input id="jEdu" type="text" placeholder="যেমন: কামিল (ফিকহ), ফাজিল..."></div>
+          <div class="form-field"><label>প্রতিষ্ঠানের নাম <span class="req">*</span></label><input id="jInst" type="text" placeholder="মাদ্রাসা / বিশ্ববিদ্যালয়ের নাম"></div>
+          <div class="form-field"><label>কাজী লাইসেন্স নম্বর <span class="req">*</span></label><input id="jLicense" type="text" placeholder="সরকারি লাইসেন্স নম্বর"></div>
+          <div class="form-field"><label>অভিজ্ঞতার বছর <span class="req">*</span></label>
+            <select id="jExp">
+              <option value="">— বছর —</option>
+              <option>১ বছরের কম</option><option>১–৩ বছর</option>
+              <option>৩–৫ বছর</option><option>৫–১০ বছর</option><option>১০+ বছর</option>
+            </select>
+          </div>
+          <div class="form-field"><label>মোট সম্পন্ন নিকাহ (আনুমানিক)</label><input id="jNikah" type="number" placeholder="যেমন: 200" min="0"></div>
+          <div class="form-field"><label>সেবার এলাকা <span class="req">*</span></label><input id="jArea" type="text" placeholder="যেমন: ঢাকা, নারায়ণগঞ্জ"></div>
+        </div>
+
+        <div class="fsec-title">📝 পেশাদার বায়ো</div>
+        <div class="form-field" style="margin-bottom:.95rem">
+          <label>আপনার সম্পর্কে সংক্ষিপ্ত পরিচিতি <span class="req">*</span></label>
+          <textarea id="jBio" rows="5" placeholder="আপনার অভিজ্ঞতা, বিশেষত্ব ও যোগ্যতা সম্পর্কে লিখুন (ন্যূনতম ৫০ অক্ষর)..."></textarea>
+        </div>
+        <div class="form-field">
+          <label>বিশেষত্ব / দক্ষতার ক্ষেত্র</label>
+          <input id="jSpec" type="text" placeholder="যেমন: নিকাহ, তালাক, মধ্যস্থতা (কমা দিয়ে আলাদা করুন)">
+        </div>
+
+        <div class="fsec-title">📸 প্রোফাইল ছবি</div>
+        <label class="photo-up-lbl">
+          <span class="pu-icon">📷</span>
+          <div class="pu-text"><span>প্রোফাইল ছবি আপলোড করুন</span><small>JPG বা PNG, সর্বোচ্চ ৫ MB — পরিষ্কার, পেশাদার ছবি ব্যবহার করুন।</small></div>
+          <input type="file" id="jPhoto" accept="image/*">
+        </label>
+        <img id="jPhotoPrev" src="" alt="প্রোফাইল ছবি">
+
+        <div class="fsec-title">📎 CV / জীবনবৃত্তান্ত আপলোড করুন</div>
+        <label class="photo-up-lbl cv-up-lbl">
+          <span class="pu-icon">📋</span>
+          <div class="pu-text">
+            <span>CV আপলোড করুন <span class="req">*</span></span>
+            <small>PDF বা Word (.doc, .docx) — সর্বোচ্চ ৫ MB। আপনার শিক্ষা, অভিজ্ঞতা ও কৃতিত্ব অন্তর্ভুক্ত করুন।</small>
+          </div>
+          <input type="file" id="jCV" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        </label>
+        <div id="jCVPrev" class="cv-preview" style="display:none"></div>
+
+        <div class="fsec-title">✅ ঘোষণাপত্র</div>
+        <div class="chk-list">
+          <label class="chk-item"><input type="checkbox" id="chk1"> আমি নিশ্চিত করছি যে আমার কাছে বৈধ সরকারি কাজী লাইসেন্স আছে।</label>
+          <label class="chk-item"><input type="checkbox" id="chk2"> আমি ইসলামী শরিয়া ও বাংলাদেশ মুসলিম পারিবারিক আইন মেনে কাজ করতে সম্মত।</label>
+          <label class="chk-item"><input type="checkbox" id="chk3"> আমার প্রদত্ত সকল তথ্য সঠিক ও সত্য।</label>
+          <label class="chk-item"><input type="checkbox" id="chk4"> আমি অফিসের নিয়মকানুন মেনে চলতে রাজি আছি।</label>
+        </div>
+
+        <button class="join-submit" onclick="submitJoinForm()">📤 আবেদন জমা দিন</button>
+      </div>
+    </div>
+
+    <!-- ASIDE -->
+    <div>
+      <div class="aside-card reveal">
+        <h3>যোগ দেওয়ার সুবিধাসমূহ</h3>
+        <div class="aside-item"><span class="aside-ic">🏅</span><div><h4>স্বীকৃত প্ল্যাটফর্ম</h4><p>বাংলাদেশের বিশ্বস্ত কাজী অফিসের অংশ হোন।</p></div></div>
+        <div class="aside-item"><span class="aside-ic">📈</span><div><h4>বেশি বুকিং</h4><p>আমাদের প্ল্যাটফর্মে থেকে আরও বেশি গ্রাহক পান।</p></div></div>
+        <div class="aside-item"><span class="aside-ic">⭐</span><div><h4>রেটিং সিস্টেম</h4><p>গ্রাহকের ফিডব্যাকে আপনার সুনাম গড়ে তুলুন।</p></div></div>
+        <div class="aside-item"><span class="aside-ic">💬</span><div><h4>প্রশাসনিক সহায়তা</h4><p>অফিসের সম্পূর্ণ সহায়তা পাবেন সর্বদা।</p></div></div>
+        <div class="aside-item"><span class="aside-ic">🔒</span><div><h4>নিরাপদ তথ্য</h4><p>আপনার তথ্য সম্পূর্ণ নিরাপদ ও গোপনীয়।</p></div></div>
+      </div>
+      <div class="steps-card reveal">
+        <h4>আবেদন প্রক্রিয়া</h4>
+        <div class="step-row"><div class="step-num-sm">১</div>ফর্ম পূরণ ও জমা দিন</div>
+        <div class="step-row"><div class="step-num-sm">২</div>আমরা আবেদন পর্যালোচনা করব</div>
+        <div class="step-row"><div class="step-num-sm">৩</div>ইমেইলে নিশ্চিতকরণ পাবেন</div>
+        <div class="step-row"><div class="step-num-sm">৪</div>দলে যোগ দিন ও সেবা শুরু করুন</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS MODAL -->
+<div class="overlay" id="joinSuccessModal">
+  <div class="modal" style="text-align:center">
+    <div style="font-size:3.8rem;margin-bottom:.7rem">✅</div>
+    <h3 style="font-family:'Noto Serif Bengali',serif;font-size:1.45rem;color:var(--gd);margin-bottom:.6rem">আবেদন সফলভাবে জমা হয়েছে!</h3>
+    <p style="color:var(--tm);line-height:1.75;margin-bottom:.5rem">আপনার আবেদন আমরা পেয়েছি। পর্যালোচনার পর আপনার ইমেইলে (<strong id="submittedEmail" style="color:var(--gd)"></strong>) নিশ্চিতকরণ পাঠানো হবে।</p>
+    <p style="font-size:.83rem;color:var(--ts);margin-bottom:1.5rem">সাধারণত ২–৩ কার্যদিবসের মধ্যে সাড়া দেওয়া হয়।</p>
+    <div style="display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap">
+      <a href="kazis.html" class="btn btn-primary">আমাদের কাজীরা দেখুন</a>
+      <button class="btn btn-ghost" onclick="closeModal('joinSuccessModal')">বন্ধ করুন</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-brand-name">ইউনুস কাজী অফিস</div><p class="footer-brand-desc">ইসলামী শরিয়া অনুযায়ী বিশ্বাসযোগ্য ও পেশাদার নিকাহ সেবা।</p></div>
+    <div class="footer-col"><h4>দ্রুত লিংক</h4><ul><li><a href="index.html">হোম</a></li><li><a href="kazis.html">আমাদের কাজীরা</a></li><li><a href="feedback.html">ফিডব্যাক</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li></ul></div>
+    <div class="footer-col"><h4>সেবাসমূহ</h4><ul><li><a href="index.html#nikah">নিকাহ রেজিস্ট্রেশন</a></li><li><a href="index.html#nikah">তালাক সেবা</a></li><li><a href="index.html#nikah">কাবিননামা</a></li></ul></div>
+    <div class="footer-col"><h4>যোগাযোগ</h4><ul><li><a href="tel:+880XXXXXXXXXX">📞 হটলাইন</a></li><li><a href="https://wa.me/880XXXXXXXXXX">💬 WhatsApp</a></li><li><a href="index.html#booking">📅 বুকিং করুন</a></li></ul></div>
+  </div>
+  <hr class="footer-hr">
+  <div class="footer-bottom"><span>© ২০২৫ ইউনুস কাজী অফিস।</span><div class="footer-socials"><a href="#">f</a><a href="#">W</a><a href="#">▶</a></div></div>
+</footer>
+
+<script src="data/kazis.js"></script>
+<script src="script.js"></script>
+<script src="js/join-kazi.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ফিডব্যাক সেন্টার — ইউনুস কাজী অফিস</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/feedback.css">
+</head>
+<body>
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-brand"><div class="brand-dot"></div>ইউনুস কাজী অফিস</a>
+  <ul class="nav-links">
+    <li><a href="index.html#nikah">নিকাহ সেবা</a></li>
+    <li><a href="kazis.html">আমাদের কাজীরা</a></li>
+    <li><a href="feedback.html" class="active">ফিডব্যাক</a></li>
+    <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+    <li><a href="index.html#contact">যোগাযোগ</a></li>
+    <li><a href="index.html#booking" class="nav-book">বুকিং করুন</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="index.html" onclick="closeMobileNav()">হোম</a>
+  <a href="kazis.html" onclick="closeMobileNav()">আমাদের কাজীরা</a>
+  <a href="about.html" onclick="closeMobileNav()">আমাদের সম্পর্কে</a>
+  <a href="join-kazi.html" onclick="closeMobileNav()" style="color:var(--gm);font-weight:600">✦ কাজী যোগ দিন</a>
+  <a href="index.html#booking" onclick="closeMobileNav()" style="color:var(--gd);font-weight:700">→ বুকিং করুন</a>
+</nav>
+
+<div class="page-hero"><div class="geo-pattern"></div>
+  <div class="breadcrumb"><a href="index.html">হোম</a><span class="sep">›</span><span>ফিডব্যাক সেন্টার</span></div>
+  <h1>ফিডব্যাক সেন্টার</h1>
+  <p>গ্রাহকদের অভিজ্ঞতা, বিবাহের ছবি এবং মন্তব্য — সবকিছু এখানে।</p>
+</div>
+
+<!-- ADD REVIEW -->
+<section style="background:var(--cd);padding:62px 5%">
+  <div class="sec-hdr center"><div class="tag">মন্তব্য করুন</div><h2 class="sec-title">আপনার ফিডব্যাক দিন</h2></div>
+  <div class="add-rev-wrap">
+    <div class="add-rev-card reveal">
+      <h2>✍️ আপনার মন্তব্য লিখুন</h2>
+      <p class="subtext">আপনার বিবাহের অভিজ্ঞতা শেয়ার করুন। ছবিসহ বা ছবি ছাড়া — যেভাবে চান।</p>
+      <div class="fgrid">
+        <div class="form-field"><label>আপনার নাম <span class="req">*</span></label><input id="fName" type="text" placeholder="আপনার নাম লিখুন"></div>
+        <div class="form-field"><label>এলাকা / শহর</label><input id="fLoc" type="text" placeholder="যেমন: ঢাকা, মিরপুর"></div>
+        <div class="form-field">
+          <label>কাজী বেছে নিন <span class="req">*</span></label>
+          <select id="fKazi"><option value="">— কাজী বেছে নিন —</option></select>
+        </div>
+        <div class="form-field">
+          <label>রেটিং <span class="req">*</span></label>
+          <div class="feed-star-pick" id="starPick">
+            <label data-val="1" onclick="pickStar(1)">★</label>
+            <label data-val="2" onclick="pickStar(2)">★</label>
+            <label data-val="3" onclick="pickStar(3)">★</label>
+            <label data-val="4" onclick="pickStar(4)">★</label>
+            <label data-val="5" onclick="pickStar(5)">★</label>
+          </div>
+          <input type="hidden" id="fStarVal" value="0">
+        </div>
+        <div class="form-field full">
+          <label>বিবাহের ছবি (ঐচ্ছিক)</label>
+          <label class="photo-up-lbl2">
+            <span style="font-size:1.4rem">📷</span>
+            <div><span style="font-weight:600;color:var(--gd);display:block">ছবি আপলোড করুন</span><small style="font-size:.75rem;color:var(--ts)">JPG বা PNG, সর্বোচ্চ ৫ MB</small></div>
+            <input type="file" id="feedPhoto" accept="image/*">
+          </label>
+          <img id="feedPhotoPrev" src="" alt="preview">
+        </div>
+        <div class="form-field full">
+          <label>আপনার মন্তব্য <span class="req">*</span></label>
+          <textarea id="fText" rows="4" placeholder="আপনার অভিজ্ঞতা লিখুন (ন্যূনতম ১০ অক্ষর)..."></textarea>
+        </div>
+      </div>
+      <button class="rev-submit" onclick="submitFeedback()">✔ মন্তব্য জমা দিন</button>
+    </div>
+  </div>
+</section>
+
+<!-- WEDDING GALLERY -->
+<section style="background:var(--cr);padding:62px 5%">
+  <div class="sec-hdr center">
+    <div class="tag">বিবাহের স্মৃতি</div>
+    <h2 class="sec-title">বিবাহের ছবিসমূহ</h2>
+    <p class="sec-desc" style="margin:0 auto">আমাদের অফিসে সম্পন্ন নিকাহের বিশেষ মুহূর্ত এবং গ্রাহকদের শেয়ার করা ছবি।</p>
+  </div>
+  <div class="photo-grid" id="photoGrid">
+    <div class="photo-tile" onclick="tryLightbox(this)"><div class="photo-tile-ph"><div style="font-size:2rem;opacity:.38">💍</div>বিবাহের ছবি ১<br><small style="opacity:.4">assets/wedding-1.jpg</small></div><div class="tile-ov">🔍</div></div>
+    <div class="photo-tile" onclick="tryLightbox(this)"><div class="photo-tile-ph"><div style="font-size:2rem;opacity:.38">🌸</div>বিবাহের ছবি ২<br><small style="opacity:.4">assets/wedding-2.jpg</small></div><div class="tile-ov">🔍</div></div>
+    <div class="photo-tile" onclick="tryLightbox(this)"><div class="photo-tile-ph"><div style="font-size:2rem;opacity:.38">📸</div>বিবাহের ছবি ৩<br><small style="opacity:.4">assets/wedding-3.jpg</small></div><div class="tile-ov">🔍</div></div>
+    <div class="photo-tile" onclick="tryLightbox(this)"><div class="photo-tile-ph"><div style="font-size:2rem;opacity:.38">🤲</div>বিবাহের ছবি ৪<br><small style="opacity:.4">assets/wedding-4.jpg</small></div><div class="tile-ov">🔍</div></div>
+    <div class="photo-tile" onclick="tryLightbox(this)"><div class="photo-tile-ph"><div style="font-size:2rem;opacity:.38">🌿</div>বিবাহের ছবি ৫<br><small style="opacity:.4">assets/wedding-5.jpg</small></div><div class="tile-ov">🔍</div></div>
+    <div class="photo-tile" onclick="tryLightbox(this)"><div class="photo-tile-ph"><div style="font-size:2rem;opacity:.38">✨</div>বিবাহের ছবি ৬<br><small style="opacity:.4">assets/wedding-6.jpg</small></div><div class="tile-ov">🔍</div></div>
+  </div>
+  <div id="dynamicPhotoGrid" class="photo-grid" style="margin-top:1.05rem"></div>
+</section>
+
+<!-- ALL REVIEWS -->
+<section style="background:var(--cd);padding:62px 5%">
+  <div class="sec-hdr">
+    <div class="tag">সকলের মন্তব্য</div>
+    <h2 class="sec-title">গ্রাহকদের ফিডব্যাক</h2>
+    <p class="sec-desc">সব কাজীর ফিডব্যাক এখানে একসাথে দেখুন।</p>
+  </div>
+  <div class="rev-filter-row">
+    <button class="rfbtn active" onclick="filterRevs('all',this)">সব মন্তব্য</button>
+    <button class="rfbtn" onclick="filterRevs('5',this)">★★★★★ পাঁচ তারা</button>
+    <button class="rfbtn" onclick="filterRevs('photo',this)">📸 ছবিসহ</button>
+    <select class="kazi-sel" id="kaziFilter" onchange="filterByKazi(this.value)">
+      <option value="">— কাজী অনুযায়ী ফিল্টার —</option>
+    </select>
+  </div>
+  <div class="rev-wall" id="revWall"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div><div class="footer-brand-name">ইউনুস কাজী অফিস</div><p class="footer-brand-desc">ইসলামী শরিয়া অনুযায়ী বিশ্বাসযোগ্য ও পেশাদার নিকাহ সেবা।</p></div>
+    <div class="footer-col"><h4>দ্রুত লিংক</h4><ul><li><a href="index.html">হোম</a></li><li><a href="kazis.html">আমাদের কাজীরা</a></li><li><a href="join-kazi.html">কাজী যোগ দিন</a></li><li><a href="about.html">আমাদের সম্পর্কে</a></li></ul></div>
+    <div class="footer-col"><h4>সেবাসমূহ</h4><ul><li><a href="index.html#nikah">নিকাহ রেজিস্ট্রেশন</a></li><li><a href="index.html#nikah">তালাক সেবা</a></li><li><a href="index.html#nikah">কাবিননামা</a></li></ul></div>
+    <div class="footer-col"><h4>যোগাযোগ</h4><ul><li><a href="tel:+880XXXXXXXXXX">📞 হটলাইন</a></li><li><a href="https://wa.me/880XXXXXXXXXX">💬 WhatsApp</a></li><li><a href="index.html#booking">📅 বুকিং করুন</a></li></ul></div>
+  </div>
+  <hr class="footer-hr">
+  <div class="footer-bottom"><span>© ২০২৫ ইউনুস কাজী অফিস।</span><div class="footer-socials"><a href="#">f</a><a href="#">W</a><a href="#">▶</a></div></div>
+</footer>
+
+<script src="data/kazis.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/feedback.js"></script>
+</body>
+</html>
