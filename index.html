@@ -12,8 +12,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/service-detail.css">
-  
-<!-- EmailJS service -->
+<!-- EmailJS for service forms -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
@@ -35,8 +34,8 @@
   <a href="feedback.html" onclick="closeMobileNav()">ফিডব্যাক</a>
   <a href="about.html" onclick="closeMobileNav()">আমাদের সম্পর্কে</a>
   <a href="#contact" onclick="closeMobileNav()">যোগাযোগ</a>
-  <a href="join-kazi.html" onclick="closeMobileNav()" style="color:var(--gm);font-weight:600">✦ কাজী হিসেবে যোগ দিন</a>
-  <a href="#booking" onclick="closeMobileNav()" style="color:var(--gd);font-weight:700">→ বুকিং করুন</a>
+  <a href="join-kazi.html" onclick="closeMobileNav()" style="color:var(--color-gold-mid);font-weight:600">✦ কাজী হিসেবে যোগ দিন</a>
+  <a href="#booking" onclick="closeMobileNav()" style="color:var(--color-gold-dark);font-weight:700">→ বুকিং করুন</a>
 </nav>
 
 <section id="hero">
@@ -56,7 +55,7 @@
   <div class="hcontent">
     <div class="hbadge"><span class="bdot"></span>নিবন্ধিত ও নির্ভরযোগ্য সেবা</div>
     <h1 class="htitle">বিশ্বাসযোগ্য<br>আপনাদের ইউনুস কাজী</h1>
-    <p class="hsub">ইসলামী শরিয়া অনুযায়ী বিবাহ বন্ধনে আবদ্ধ ও ডিভোর্স করানো হয়। আইনসম্মত, অভিজ্ঞ ও যত্নশীল সেবা।</p>
+    <p class="hsub">ইসলামী শরিয়া অনুযায়ী বিবাহ বন্ধনে আবদ্ধ ও ডিভোর্স করানো হয়। সম্পূর্ণ বৈধ, নির্ভরযোগ্য ও পেশাদার সেবা।</p>
     <div class="hbtns">
       <a href="kazis.html" class="btn btn-primary btn-lg">আমাদের কাজীরা দেখুন</a>
       <a href="#nikah" class="btn btn-outline btn-lg">সেবাসমূহ</a>
@@ -64,10 +63,10 @@
   </div>
   <div class="hvisual">
     <div class="hframe">
-      <!-- Profile image  -->
+      <!-- Kazi profile image container -->
       <div class="hph">
         <svg width="58" height="58" viewBox="0 0 64 64" fill="none"><rect x="6" y="6" width="52" height="52" rx="10" stroke="#C9970A" stroke-width="1.5" stroke-dasharray="6 3"/><circle cx="32" cy="24" r="9" stroke="#C9970A" stroke-width="1.5"/><path d="M12 52 Q22 38 32 37 Q42 38 52 52" stroke="#C9970A" stroke-width="1.5" fill="none"/></svg>
-        <span>কাজী সাহেবের ছবি</span><span style="font-size:.7rem;opacity:.45">profile-image.jpg</span>
+        <span>কাজী সাহেবের ছবি</span><span style="font-size:.7rem;opacity:.45">assets/kazi-younus.jpg</span>
       </div>
       <div class="hfloat"><span class="hfi">🏅</span><div class="hft"><strong>২৫+ বছর অভিজ্ঞতা</strong>সরকার নিবন্ধিত কাজী</div></div>
     </div>
@@ -110,7 +109,7 @@
 </section>
 
 <section id="how" class="section-pad">
-  <div class="sec-hdr"><div class="tag">পদ্ধতি</div><h2 class="sec-title">কিভাবে কাজ করে</h2><p class="sec-desc">কিছু সহজ ধাপ অনুসরণ করলেই প্রক্রিয়াটি সম্পন্ন করা যায়।</p></div>
+  <div class="sec-hdr"><div class="tag">পদ্ধতি</div><h2 class="sec-title">কিভাবে কাজ করে</h2><p class="sec-desc">মাত্র কয়েকটি সহজ ধাপে আপনার কাজ সম্পন্ন হবে।</p></div>
   <div class="howlay">
     <div class="stepslist">
       <div class="step reveal"><div class="stepn">১</div><div class="stepb"><h3>যোগাযোগ বা বুকিং</h3><p>ফোন, WhatsApp বা অনলাইন ফর্মের মাধ্যমে যোগাযোগ করুন।</p></div></div>
@@ -136,7 +135,7 @@
   <div class="bklay">
     <div class="bkinfo">
       <div class="tag">অনলাইন বুকিং</div>
-      <h2 class="sec-title" style="color:var(--gl)">বুকিং করুন</h2>
+      <h2 class="sec-title" style="color:var(--color-gold-light)">বুকিং করুন</h2>
       <p style="color:rgba(255,255,255,.7);margin-bottom:1.4rem;font-size:.94rem">আপনার সুবিধামতো কাজীর জন্য অনুরোধ পাঠান।</p>
       <h3>কেন আমাদের বেছে নেবেন?</h3>
       <div class="perklist">
@@ -177,34 +176,32 @@
     <a href="feedback.html" class="btn btn-ghost">সব ফিডব্যাক →</a>
   </div>
   <div class="revgrid" id="homeRevGrid"></div>
-  <div class="revnote">আপনার অভিজ্ঞতা শেয়ার করুন! <a href="feedback.html" style="color:var(--gr);font-weight:600">ফিডব্যাক দিন →</a></div>
+  <div class="revnote">আপনার অভিজ্ঞতা শেয়ার করুন! <a href="feedback.html" style="color:var(--color-gold-rich);font-weight:600">ফিডব্যাক দিন →</a></div>
 </section>
 
 <section id="gallery" class="section-pad">
-  <div class="sec-hdr center"><div class="tag">বিবাহের স্মৃতি</div><h2 class="sec-title">বিবাহের ছবিসমূহ</h2><p class="sec-desc" style="margin:0 auto">আমাদের সেবার কিছু স্মরণীয় মুহূর্তের ছবি।</p></div>
+  <div class="sec-hdr center"><div class="tag">বিবাহের স্মৃতি</div><h2 class="sec-title">বিবাহের ছবিসমূহ</h2><p class="sec-desc" style="margin:0 auto">আমাদের অফিসে সম্পন্ন নিকাহের কিছু বিশেষ মুহূর্ত।</p></div>
   <div class="galgrid">
-    <!-- Gallery items -->
-    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">💍</div>বিবাহের ছবি ১<br><small style="opacity:.45">gallery-image-1.jpg</small></div><div class="galov">🔍</div></div>
-    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">🌸</div>বিবাহের ছবি ২<br><small style="opacity:.45">gallery-image-2.jpg</small></div><div class="galov">🔍</div></div>
-    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">📸</div>বিবাহের ছবি ৩<br><small style="opacity:.45">gallery-image-3.jpg</small></div><div class="galov">🔍</div></div>
-    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">🤲</div>বিবাহের ছবি ৪<br><small style="opacity:.45">gallery-image-4.jpg</small></div><div class="galov">🔍</div></div>
-    <div class="galitem" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--gd),var(--gm))"><a href="feedback.html" style="color:#fff;text-align:center;font-weight:700;font-size:.9rem;padding:1rem">📸 আরও ছবি<br>→ ফিডব্যাক পেজ</a></div>
+    <!-- Wedding gallery items -->
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">💍</div>বিবাহের ছবি ১<br><small style="opacity:.45">assets/wedding-1.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">🌸</div>বিবাহের ছবি ২<br><small style="opacity:.45">assets/wedding-2.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">📸</div>বিবাহের ছবি ৩<br><small style="opacity:.45">assets/wedding-3.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem reveal"><div class="galph"><div style="font-size:2rem;opacity:.4">🤲</div>বিবাহের ছবি ৪<br><small style="opacity:.45">assets/wedding-4.jpg</small></div><div class="galov">🔍</div></div>
+    <div class="galitem" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--color-gold-dark),var(--color-gold-mid))"><a href="feedback.html" style="color:#fff;text-align:center;font-weight:700;font-size:.9rem;padding:1rem">📸 আরও ছবি<br>→ ফিডব্যাক পেজ</a></div>
   </div>
 </section>
 
-<section id="faq" class="section-pad" style="background:var(--cd)">
+<section id="faq" class="section-pad" style="background:var(--color-cream-dark)">
   <div class="sec-hdr"><div class="tag">প্রশ্নোত্তর</div><h2 class="sec-title">সাধারণ জিজ্ঞাসা</h2></div>
   <div style="max-width:730px">
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">নিকাহ রেজিস্ট্রেশনের জন্য কী কী কাগজপত্র লাগবে?<div class="faq-icon">+</div></button><div class="faq-a">বর ও কনের জাতীয় পরিচয়পত্র, জন্ম নিবন্ধন সনদ, পাসপোর্ট সাইজ ছবি (৩ কপি), অভিভাবকের সম্মতিপত্র এবং প্রয়োজনে বিগত বিবাহের তালাকনামা।</div></div>
-    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">কোন কাজীকে বুকিং করব কীভাবে বুঝব?<div class="faq-icon">+</div></button><div class="faq-a">আমাদের <a href="kazis.html" style="color:var(--gr)">কাজীদের পেজে</a> প্রতিটি কাজীর প্রোফাইল, রেটিং, অভিজ্ঞতা ও সময়সূচি দেখুন এবং পছন্দমতো বুক করুন।</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">কোন কাজীকে বুকিং করব কীভাবে বুঝব?<div class="faq-icon">+</div></button><div class="faq-a">আমাদের <a href="kazis.html" style="color:var(--color-gold-rich)">কাজীদের পেজে</a> প্রতিটি কাজীর প্রোফাইল, রেটিং, অভিজ্ঞতা ও সময়সূচি দেখুন এবং পছন্দমতো বুক করুন।</div></div>
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">বাড়িতে এসে নিকাহ পড়ানো কি সম্ভব?<div class="faq-icon">+</div></button><div class="faq-a">হ্যাঁ, বিশেষ ব্যবস্থায় বাড়ি, কমিউনিটি হল বা মসজিদে এসে নিকাহ সম্পন্ন করা হয়।</div></div>
     <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">প্রবাসীরা কীভাবে সেবা পাবেন?<div class="faq-icon">+</div></button><div class="faq-a">প্রবাসীরা WhatsApp বা ভিডিও কলের মাধ্যমে যোগাযোগ করতে পারেন। পাওয়ার অব অ্যাটর্নি দিয়েও কার্যক্রম পরিচালনা সম্ভব।</div></div>
-    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">নতুন কাজী হিসেবে কীভাবে যোগ দেব?<div class="faq-icon">+</div></button><div class="faq-a">আমাদের <a href="join-kazi.html" style="color:var(--gr)">কাজী যোগদান পেজে</a> গিয়ে আপনার CV ও প্রয়োজনীয় তথ্য জমা দিন।</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">নতুন কাজী হিসেবে কীভাবে যোগ দেব?<div class="faq-icon">+</div></button><div class="faq-a">আমাদের <a href="join-kazi.html" style="color:var(--color-gold-rich)">কাজী যোগদান পেজে</a> গিয়ে আপনার CV ও প্রয়োজনীয় তথ্য জমা দিন।</div></div>
   </div>
 </section>
 
-
-  
 <section id="contact" class="section-pad">
   <div class="sec-hdr"><div class="tag">যোগাযোগ</div><h2 class="sec-title">আমাদের সাথে যোগাযোগ করুন</h2></div>
   <div class="conlay">
@@ -215,10 +212,30 @@
       <div class="concard reveal"><div class="conic">📧</div><div><div class="conlbl">ইমেইল</div><div class="conval"><a href="mailto:classr489@gmail.com">classr489@gmail.com</a></div></div></div>
       <div class="concard reveal"><div class="conic">🕐</div><div><div class="conlbl">অফিস সময়</div><div class="conval">শনি–বৃহস্পতি: ৯টা–৭টা | শুক্র: ৩টা–৭টা</div></div></div>
     </div>
-    <div class="mapbox reveal" onclick="window.open('https://maps.app.goo.gl/jJWTizYtMzxP1t1E8','_blank')">
-      <svg width="46" height="46" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="24" stroke="#C9970A" stroke-width="1.5" stroke-dasharray="5 3"/><circle cx="26" cy="22" r="7" stroke="#C9970A" stroke-width="1.5"/><path d="M26 29 L26 44" stroke="#C9970A" stroke-width="1.5"/></svg>
-      ম্যাপ প্রদর্শনের স্থান<br><small style="opacity:.45;font-size:.73rem">প্রয়োজনে এমবেড ম্যাপ যুক্ত করুন</small>
+
+    <div class="mapbox" style="padding:0;overflow:hidden;cursor:default">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.0!2d90.4125!3d23.8103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQ4JzM3LjEiTiA5MMKwMjQnNDUuMCJF!5e0!3m2!1sbn!2sbd!4v1234567890"
+    width="100%"
+    height="100%"
+    style="border:0; display:block; min-height:270px;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+  </div>
+
+  <!-- TEXT AREA -->
+  <div class="map-footer">
+    <div class="map-text">
+      <h4>ম্যাপ প্রদর্শনের স্থান</h4>
+      <small>লাইভ অবস্থান প্রিভিউ</small>
     </div>
+  </div>
+
+</div>
   </div>
 </section>
 
